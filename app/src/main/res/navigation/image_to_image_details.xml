@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/image_to_image_details"
+    app:startDestination="@id/postActivity">
+
+    <activity
+        android:id="@+id/postActivity"
+        android:name="com.insacvl.sefkim_flickr.PostActivity"
+        android:label="fragment_image_details"
+        tools:layout="@layout/fragment_image_details" >
+    </activity>
+    <fragment
+        android:id="@+id/imageView"
+        android:name="com.insacvl.sefkim_flickr.view.FavouriteFragment"
+        android:label="@string/title_category"
+        tools:layout="@layout/favourite_fragment" >
+       <action
+            android:id="@+id/image_to_image_details"
+            app:destination="@id/imageDetailsFragment" />
+    </fragment>
+</navigation>
+

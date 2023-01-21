@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:id="@+id/test"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="GOUIJANE IMAGE SEARCH"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/search_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="200dp"
+            android:height="50dp"
+            android:textColor="@color/white"
+            android:text="@string/search_image" />
+
+        <Button
+            android:id="@+id/favourites_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="200dp"
+            android:height="50dp"
+            android:textColor="@color/white"
+            android:text="@string/favourites" />
+
+        <Button
+            android:id="@+id/other_apps_button"
+            android:layout_width="wrap_content"
+            android:width="200dp"
+            android:height="50dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:text="@string/other_apps" />
+        <Button
+            android:id="@+id/settings_button"
+            android:layout_width="wrap_content"
+            android:width="200dp"
+            android:height="50dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:text="@string/settings" />
+
+    </LinearLayout>
+
+</LinearLayout>

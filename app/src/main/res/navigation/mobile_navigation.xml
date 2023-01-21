@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.insacvl.sefkim_flickr.view.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_imageDetailsFragment"
+            app:destination="@id/imageDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_category"
+        android:name="com.insacvl.sefkim_flickr.view.FavouriteFragment"
+        android:label="@string/title_category"
+        tools:layout="@layout/favourite_fragment" >
+        <action
+            android:id="@+id/action_navigation_category_to_categoryViewFragment"
+            app:destination="@id/categoryViewFragment" />
+        <action
+            android:id="@+id/action_navigation_category_to_imageDetailsFragment"
+            app:destination="@id/imageDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.insacvl.sefkim_flickr.view.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/search_fragment" >
+        <action
+            android:id="@+id/action_navigation_search_to_imageDetailsFragment"
+            app:destination="@id/imageDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageDetailsFragment"
+        android:name="com.insacvl.sefkim_flickr.view.ImageDetailsFragment"
+        android:label="Image details"
+        tools:layout="@layout/fragment_image_details" >
+        <argument
+            android:name="pictureId"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageItemFragment"
+        android:label="ImageItem"
+        tools:layout="@layout/image_item"
+        >
+
+        <action
+            android:id="@+id/action_imageItemFragment_to_imageDetailsFragment2"
+            app:destination="@id/imageDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryViewFragment"
+        android:name="com.insacvl.sefkim_flickr.view.CategoryViewFragment"
+        android:label="Category view"
+        tools:layout="@layout/fragment_category_view" >
+        <argument
+            android:name="category"
+            app:argType="string"
+            android:defaultValue="fashion" />
+        <action
+            android:id="@+id/action_categoryViewFragment_to_imageDetailsFragment"
+            app:destination="@id/imageDetailsFragment" />
+    </fragment>
+</navigation>

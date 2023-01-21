@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/sgouijan/AndroidStudioProjects/Image_Searcher_GOUIJANE/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/Users/sgouijan/AndroidStudioProjects/Image_Searcher_GOUIJANE/app/src/main/res/layout/content_main.xml" value="0.3605072463768116" />
+        <entry key="..\:/Users/sgouijan/AndroidStudioProjects/Image_Searcher_GOUIJANE/app/src/main/res/layout/favourite_fragment.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/sgouijan/AndroidStudioProjects/Image_Searcher_GOUIJANE/app/src/main/res/layout/fragment_category_view.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/sgouijan/AndroidStudioProjects/Image_Searcher_GOUIJANE/app/src/main/res/layout/fragment_first.xml" value="0.3605072463768116" />
+        <entry key="..\:/Users/sgouijan/AndroidStudioProjects/Image_Searcher_GOUIJANE/app/src/main/res/layout/fragment_home.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/sgouijan/AndroidStudioProjects/Image_Searcher_GOUIJANE/app/src/main/res/layout/fragment_image_details.xml" value="0.3428442028985507" />
+        <entry key="..\:/Users/sgouijan/AndroidStudioProjects/Image_Searcher_GOUIJANE/app/src/main/res/layout/fragment_options.xml" value="0.18" />
+        <entry key="..\:/Users/sgouijan/AndroidStudioProjects/Image_Searcher_GOUIJANE/app/src/main/res/layout/fragment_second.xml" value="0.3605072463768116" />
+        <entry key="..\:/Users/sgouijan/AndroidStudioProjects/Image_Searcher_GOUIJANE/app/src/main/res/layout/home_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/sgouijan/AndroidStudioProjects/Image_Searcher_GOUIJANE/app/src/main/res/layout/image_item.xml" value="0.33" />
+        <entry key="..\:/Users/sgouijan/AndroidStudioProjects/Image_Searcher_GOUIJANE/app/src/main/res/layout/search_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/sgouijan/AndroidStudioProjects/Image_Searcher_GOUIJANE/app/src/main/res/layout/shimmer_list_pictures_grid.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/sgouijan/AndroidStudioProjects/Image_Searcher_GOUIJANE/app/src/main/res/layout/welcome_screen.xml" value="0.1" />
+        <entry key="..\:/Users/sgouijan/AndroidStudioProjects/Image_Searcher_GOUIJANE/app/src/main/res/menu/bottom_nav_menu.xml" value="0.33" />
+        <entry key="..\:/Users/sgouijan/AndroidStudioProjects/Image_Searcher_GOUIJANE/app/src/main/res/menu/menu_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/sgouijan/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/activity_list_item.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/sgouijan/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_list_item_1.xml" value="0.175" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

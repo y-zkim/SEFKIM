@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/aguafina_script</item>
+        <item>@font/alata</item>
+        <item>@font/amita</item>
+        <item>@font/denk_one</item>
+        <item>@font/ma_shan_zheng</item>
+        <item>@font/raleway_light</item>
+        <item>@font/rancho</item>
+    </array>
+</resources>

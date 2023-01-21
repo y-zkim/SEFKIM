@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <menu tools:ignore="MissingConstraints">
+        <item
+            android:id="@+id/install"
+            android:title="Install" />
+        <item
+            android:id="@+id/addtowishlist"
+            android:title="Add to wishlist" />
+    </menu>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
