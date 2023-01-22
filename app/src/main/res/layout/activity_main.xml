@@ -11,7 +11,8 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground">
+        android:background="?android:attr/windowBackground"
+        tools:ignore="MissingConstraints">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -24,6 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="13dp"
                 android:layout_marginStart="10dp"
+
                 >
 
                 <!--                <ImageView-->
@@ -32,21 +34,36 @@
                 <!--                    android:layout_alignParentStart="true"-->
                 <!--                    android:src="@drawable/home"-->
                 <!--                    android:id="@+id/close"/>-->
-
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/app_logo">
+                </ImageView>
                 <TextView
                     android:id="@+id/post"
                     android:layout_width="86dp"
                     android:layout_height="25dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginStart="100dp"
+                    android:layout_marginStart="90dp"
                     android:layout_marginTop="0dp"
                     android:layout_marginEnd="100dp"
+                    android:theme="@style/Theme.SEFKIM"
                     android:fontFamily="@font/raleway_light"
                     android:text="SEFKIM"
                     android:textAlignment="center"
-                    android:theme="@style/ThemeOverlay.AppCompat.Light"
                     android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/settingsButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/transparent"
+                    android:src="@drawable/ic_settings_black_24dp">
+
+                </ImageButton>
 
             </RelativeLayout>
 
@@ -68,15 +85,17 @@
     <fragment
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="409dp"
-        android:layout_height="617dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="56dp"
         app:defaultNavHost="true"
-        app:layout_constraintBottom_toTopOf="@id/nav_view"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
         app:navGraph="@navigation/mobile_navigation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

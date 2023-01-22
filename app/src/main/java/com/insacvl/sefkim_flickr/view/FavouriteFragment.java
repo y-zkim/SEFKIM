@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.insacvl.sefkim_flickr.R;
 import com.insacvl.sefkim_flickr.adapters.ImageListAdapter;
@@ -43,11 +44,11 @@ public class FavouriteFragment extends Fragment {
                 null,                   // don't group the rows
                 null,                   // don't filter by row groups
                 null);     // The sort order
-        ListView listView = view.findViewById(R.id.listviewfavourites);
+        RecyclerView listView = view.findViewById(R.id.listviewfavourites);
         String[] fromColumns = {FavoriteContract.FavoriteEntry.COLUMN_IMAGE_TITLE};
         int[] toViews = {android.R.id.text1}; // The TextView in simple_list_item_1
         try {
-            ImageListAdapter adapter = new ImageListAdapter(this.getContext(), convertCursorToModelList(cursor));
+            FavoritesAdapter adapter = new FavoritesAdapter(convertCursorToModelList(cursor));
             listView.setAdapter(adapter);
             db.close();
         }catch (Exception e){

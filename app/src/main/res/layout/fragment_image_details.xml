@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
     tools:context=".PostActivity">
     <!--    <com.google.android.material.appbar.AppBarLayout-->
     <!--        android:layout_width="match_parent"-->
@@ -49,38 +48,47 @@
     <!--        </androidx.appcompat.widget.Toolbar>-->
 
     <!--    </com.google.android.material.appbar.AppBarLayout>-->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-<!--        <TextView-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content">-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Hello">&ndash;&gt;-->
+
+<!--&lt;!&ndash;        </TextView>&ndash;&gt;-->
+<!--        <androidx.appcompat.widget.ActionMenuView-->
 <!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Hello">-->
+<!--            android:layout_height="wrap_content">-->
 
-<!--        </TextView>-->
-        <androidx.appcompat.widget.ActionMenuView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+<!--        </androidx.appcompat.widget.ActionMenuView>-->
+<!--    </LinearLayout>-->
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:cardElevation="0dp"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:padding="8dp"-->
+<!--        android:orientation="vertical"-->
+<!--        app:cardCornerRadius="20dp"></androidx.cardview.widget.CardView>-->
 
-        </androidx.appcompat.widget.ActionMenuView>
-    </LinearLayout>
-    <androidx.cardview.widget.CardView
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardElevation="0dp"
-        android:layout_margin="20dp"
-        android:padding="8dp"
-        android:orientation="vertical"
-        app:cardCornerRadius="20dp">
-
-
+        android:layout_height="300dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="350dp"
-            android:scaleType="fitCenter"
             android:layout_gravity="center"
-            tools:srcCompat="@tools:sample/avatars"/>
+            android:scaleType="fitCenter"
+            tools:srcCompat="@tools:sample/avatars" />
+
+
 
     </androidx.cardview.widget.CardView>
 
@@ -109,7 +117,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:layout_marginStart="306dp"
+                android:layout_marginLeft="20dp"
                 app:srcCompat="@drawable/download" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -119,6 +127,7 @@
             android:text="\nDescription"
             android:fontFamily="@font/raleway_light"
             android:textSize="18sp"
+            android:textStyle="bold"
             />
 
         <TextView
@@ -126,13 +135,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:textColor="@color/color_gray"
+            android:textSize="14sp"
             android:fontFamily="@font/raleway_light"
             android:maxLines="5"/>
-<!--        <View-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="0.1dp"-->
-<!--            android:background="@android:color/darker_gray"/>-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@android:color/darker_gray"/>
+
 
 
 

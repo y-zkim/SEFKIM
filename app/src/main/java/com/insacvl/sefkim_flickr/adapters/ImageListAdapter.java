@@ -68,6 +68,7 @@ public class ImageListAdapter extends BaseAdapter {
         imageTitle = convertView.findViewById(R.id.title);
         favouriteButton = convertView.findViewById(R.id.favourite_button);
         cardImage = convertView.findViewById(R.id.imageView);
+        holder.imageView.setTag(image);
         Picasso.get().load(image.getImageUrl()).into(holder.imageView);
         imageTitle.setText(image.getImageTitle());
         new FavouritesHandler(favouriteButton, context).handleFavouriteCheckImage(image);
@@ -79,9 +80,10 @@ public class ImageListAdapter extends BaseAdapter {
                 Bundle bundle = new Bundle();
                 bundle.putString("imageUrl", image.getImageUrl());
                 bundle.putString("imageText", image.getImageTitle());
+                bundle.putString("imageId", image.getImageId());
 //                Navigation.findNavController(view).navigate(R.id.confirmationAction, bundle);
                 NavController navController = Navigation.findNavController(view);
-                navController.navigate(R.id.action_navigation_category_to_imageDetailsFragment,bundle);
+                navController.navigate(R.id.action_navigation_search_to_imageDetailsFragment,bundle);
 
 
 

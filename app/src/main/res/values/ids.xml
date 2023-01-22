@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="search_edit_text" type="id" />
+    <item name="action_navigation_home_to_navigation_search" type="id" />
 </resources>

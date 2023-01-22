@@ -3,9 +3,11 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/aguafina_script</item>
         <item>@font/alata</item>
+        <item>@font/alatsi</item>
         <item>@font/amita</item>
         <item>@font/denk_one</item>
         <item>@font/ma_shan_zheng</item>
+        <item>@font/montserrat_alternates_thin</item>
         <item>@font/raleway_light</item>
         <item>@font/rancho</item>
     </array>

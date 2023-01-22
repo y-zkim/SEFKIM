@@ -28,7 +28,16 @@ android {
     buildFeatures {
         viewBinding true
     }
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+    lintOptions {
+        warning 'Deprecation'
+    }
+
+
 }
+
 
 dependencies {
 
@@ -50,4 +59,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'com.sdsmdg.harjot:longshadows:1.0.1'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
 }

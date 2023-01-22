@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FlickrImages extends AsyncTask<String, Void, JSONArray> {
-    private static final String API_KEY = "38b58d4d8a0bc07cf91a7a2c0dfdbb44";
+    private static final String API_KEY = "3b7065148e6472b239e13f9ecde2b260";
     private static final String ENDPOINT = "https://www.flickr.com/services/rest/";
     private static final String SEARCH_METHOD = "?method=flickr.photos.search&api_key=";
     private static final String RECENT_METHOD = "?method=flickr.photos.getRecent&api_key=";

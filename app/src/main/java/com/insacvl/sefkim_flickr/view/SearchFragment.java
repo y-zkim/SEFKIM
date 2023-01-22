@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.widget.SearchView;
 
@@ -15,13 +16,17 @@ import androidx.fragment.app.Fragment;
 import com.insacvl.sefkim_flickr.utils.FlickrImages;
 import com.insacvl.sefkim_flickr.R;
 
+import java.util.Objects;
+
 public class SearchFragment extends Fragment {
     private SearchView searchView;
+    private ImageView image;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.search_fragment, container, false);
         searchView = view.findViewById(R.id.search_view);
+        image= searchView.findViewById(R.id.imageView);
 //        Button download_button = searchView.findViewById(R.id.download_button);
 //        download_button.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -32,6 +37,7 @@ public class SearchFragment extends Fragment {
 //                startActivity(i);
 //            }
 //        });
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -58,10 +64,21 @@ public class SearchFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        Bundle bundle = getArguments();
+        performSearch(Objects.isNull(bundle)?
+                "":
+                bundle.getString("tag"));
+    }
+
     /**
      * This function performs the search and send the results to the adapter in order to update the listView with results
      * @param searchTerm
      */
+
+
     public void performSearch(String searchTerm) {
         new FlickrImages(getView().findViewById(R.id.listview), getContext()).execute(searchTerm);
     }

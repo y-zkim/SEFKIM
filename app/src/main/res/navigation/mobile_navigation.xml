@@ -12,8 +12,26 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_navigation_home_to_imageDetailsFragment"
-            app:destination="@id/imageDetailsFragment" />
+            app:destination="@id/imageDetailsFragment">
+        </action>
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_search"
+            app:destination="@id/navigation_search" />
+        <action
+            android:id="@+id/action_navigation_home_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+
     </fragment>
+    <fragment
+        android:id="@+id/mainActivity"
+        android:name="com.insacvl.sefkim_flickr.MainActivity"
+        android:label="activityMain"
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/action_mainActivity_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
 
     <fragment
         android:id="@+id/navigation_category"
@@ -70,4 +88,14 @@
             android:id="@+id/action_categoryViewFragment_to_imageDetailsFragment"
             app:destination="@id/imageDetailsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.insacvl.sefkim_flickr.view.RoomDetailsActivity"
+        android:label="settings"
+        tools:layout="@layout/settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+
 </navigation>
