@@ -1,5 +1,7 @@
 package com.insacvl.sefkim_flickr.onboarding;
-
+/**
+* @Author : ZKIM Youssef
+*/
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +13,40 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import com.insacvl.sefkim_flickr.R;
 
-/**
- * Smart Home
- * https://github.com/quintuslabs/SmartHome
- * Created on 27-OCT-2019.
- * Created by : Santosh Kumar Dash:- http://santoshdash.epizy.com
+/*
+ *=================================================================================================*
+ *                                  Developed by : ZKIM Youssef                                    *
+ *=================================================================================================*
+ *=================================================================================================*
+ *                                                                                                 *
+ *                                    OnBoardingAdapter                                            *
+ *                                                                                                 *
+ *=================================================================================================*
+ * Class Description                                                                               *
+ * ----------------                                                                                *
+ * OnboardingAdapter is a class that extends PagerAdapter. It is used to handle the different      *
+ * layouts for an onboarding experience.                                                           *
+ *                                                                                                 *
+ * The class has a context which is used to access system services. It also has an array of        *
+ * integers (layouts) which contains the layout resources for each onboarding screen               *
+ *                                                                                                 *
+ * The constructor for the class takes in a Context object. It sets the context variable to the    *
+ * passed in context.                                                                              *
+ *                                                                                                 *
+ * The getCount() method returns the number of layouts in the layouts array. This is used to       *
+ * determine how many pages the onboarding experience will have.                                   *
+ *                                                                                                 *
+ * The isViewFromObject() method checks if the passed in view and object are the same. This is used*
+ * to determine if a view should be reused or not.                                                 *
+ *                                                                                                 *
+ * The instantiateItem() method inflates the layout at the given position and adds it to the       *
+ * container. It also sets the tag of the view to the position it is in. It then returns the view. *
+ *                                                                                                 *
+ * The destroyItem() method removes the passed in object (which is a ConstraintLayout) from the    *
+ * container. This is used to clean up and remove old views that are no longer needed.             *
+ *                                                                                                 *
+ *=================================================================================================*
+
  */
 
 public class OnboardingAdapter extends PagerAdapter {
@@ -32,21 +63,21 @@ public class OnboardingAdapter extends PagerAdapter {
         this.context = context;
     }
 
+
     @Override
     public int getCount() {
         return layouts.length;
     }
 
+
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-//        return false;
         return view == object;
     }
 
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
-//        return super.instantiateItem(container, position);
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(layouts[position], container, false);
         view.setTag(position);
@@ -59,7 +90,6 @@ public class OnboardingAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-//        super.destroyItem(container, position, object);
         container.removeView((ConstraintLayout) object);
     }
 }

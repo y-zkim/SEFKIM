@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><!--Smart Home
-   https://github.com/quintuslabs/SmartHome
-   Created on 27-OCT-2019.
-   Created by : Santosh Kumar Dash:- http://santoshdash.epizy.com-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--SEFKIM
+   https://github.com/y-zkim/SEFKIM/
+   Created on 12-JAN-2023.
+   Created by : ZKIM Youssef:- https://github.com/y-zkim/
+-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -16,18 +18,6 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.1" />
 
-    <!-- <ImageView
-         android:id="@+id/imageView4"
-         android:layout_width="0dp"
-         android:layout_height="wrap_content"
-         android:contentDescription="TODO"
-         android:scaleType="centerCrop"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintHorizontal_bias="0.5"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toTopOf="@+id/guideline6"
-         app:srcCompat="@drawable/onboarding_activity_ic_waves_1"
-         tools:ignore="VectorDrawableCompat" />-->
 
     <ImageView
         android:id="@+id/imageView3"

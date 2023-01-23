@@ -1,22 +1,39 @@
 package com.insacvl.sefkim_flickr.view;
-
-import android.content.Intent;
-import android.net.Uri;
+/**
+* @Author : ZKIM Youssef
+*/
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.appcompat.widget.SearchView;
 
 import androidx.fragment.app.Fragment;
 
-import com.insacvl.sefkim_flickr.utils.FlickrImages;
+import com.insacvl.sefkim_flickr.utils.FlickrAPI;
 import com.insacvl.sefkim_flickr.R;
 
 import java.util.Objects;
+
+/*
+ *=================================================================================================*
+ *                                  Developed by : ZKIM Youssef                                    *
+ *=================================================================================================*
+ *=================================================================================================*
+ *                                                                                                 *
+ *                                          SearchFragment                                         *
+ *                                                                                                 *
+ *=================================================================================================*
+ * Class Description                                                                               *
+ * ----------------                                                                                *
+ * The details have the image, it's description, as well as the like button and the download.      *
+ * Those features are handled by this class by calling the necessary adapter and putting listeners.*
+ *                                                                                                 *
+ *=================================================================================================*
+
+ */
 
 public class SearchFragment extends Fragment {
     private SearchView searchView;
@@ -27,16 +44,6 @@ public class SearchFragment extends Fragment {
         View view = inflater.inflate(R.layout.search_fragment, container, false);
         searchView = view.findViewById(R.id.search_view);
         image= searchView.findViewById(R.id.imageView);
-//        Button download_button = searchView.findViewById(R.id.download_button);
-//        download_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                String url = "http://www.google.com";
-//                Intent i = new Intent(Intent.ACTION_VIEW);
-//                i.setData(Uri.parse(url));
-//                startActivity(i);
-//            }
-//        });
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -52,15 +59,6 @@ public class SearchFragment extends Fragment {
                 return false;
             }
         });
-//        favouriteButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                LinearLayout linearLayout = (LinearLayout) view.getParent();
-//                linearLayout.getChildAt(1);
-//                System.out.println("linearLayout.getChildAt(1) = " + linearLayout.getChildAt(1));
-//                System.out.println("linearLayout.getChildAt(2) = " + linearLayout.getChildAt(2));
-//            }
-//        });
         return view;
     }
 
@@ -70,7 +68,7 @@ public class SearchFragment extends Fragment {
         Bundle bundle = getArguments();
         performSearch(Objects.isNull(bundle)?
                 "":
-                bundle.getString("tag"));
+                bundle.getString("searchTag"));
     }
 
     /**
@@ -80,7 +78,7 @@ public class SearchFragment extends Fragment {
 
 
     public void performSearch(String searchTerm) {
-        new FlickrImages(getView().findViewById(R.id.listview), getContext()).execute(searchTerm);
+        new FlickrAPI(getView().findViewById(R.id.listview), getContext()).execute(searchTerm);
     }
 
 

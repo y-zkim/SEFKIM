@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><!--Smart Home
-   https://github.com/quintuslabs/SmartHome
-   Created on 27-OCT-2019.
-   Created by : Santosh Kumar Dash:- http://santoshdash.epizy.com-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--SEFKIM
+   https://github.com/y-zkim/SEFKIM/
+   Created on 12-JAN-2023.
+   Created by : ZKIM Youssef:- https://github.com/y-zkim/
+-->
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view"
@@ -28,12 +30,6 @@
             android:orientation="vertical"
             android:padding="10dp">
 
-<!--            <ImageView-->
-<!--                android:id="@+id/image_view"-->
-<!--                android:layout_width="70dp"-->
-<!--                android:layout_height="70dp"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:background="@drawable/ic_double_bed" />-->
 
             <TextView
                 android:id="@+id/title"
@@ -63,17 +59,6 @@
                 android:theme="@style/ThemeOverlay.AppCompat.Dark"
                 android:textStyle="bold" />
 
-<!--            <com.quintus.labs.smarthome.utils.SwitchButton-->
-<!--                android:layout_width="65dp"-->
-<!--                android:layout_height="30dp"-->
-<!--                android:layout_alignParentEnd="true"-->
-<!--                android:layout_marginTop="5dp"-->
-<!--                app:sb_background="@color/colorPrimaryLight"-->
-<!--                app:sb_button_color="@color/colorPrimaryDark"-->
-<!--                app:sb_checked_color="#673AB7"-->
-<!--                app:sb_checkline_color="#a5dc88"-->
-<!--                app:sb_shadow_color="#A36F95"-->
-<!--                app:sb_uncheckcircle_color="#3F51B5" />-->
         </RelativeLayout>
     </RelativeLayout>
 

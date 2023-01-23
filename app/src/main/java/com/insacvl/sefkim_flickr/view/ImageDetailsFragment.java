@@ -1,5 +1,7 @@
 package com.insacvl.sefkim_flickr.view;
-
+/**
+* @Author : ZKIM Youssef
+*/
 import static android.os.Environment.getExternalStorageDirectory;
 
 import android.Manifest;
@@ -37,6 +39,24 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 
+/*
+ *=================================================================================================*
+ *                                  Developed by : ZKIM Youssef                                    *
+ *=================================================================================================*
+ *=================================================================================================*
+ *                                                                                                 *
+ *                                      image_item_Fragment                                        *
+ *                                                                                                 *
+ *=================================================================================================*
+ * Class Description                                                                               *
+ * ----------------                                                                                *
+ * The details have the image, it's description, as well as the like button and the download.      *
+ * Those features are handled by this class by calling the necessary adapter and putting listeners.*
+ *                                                                                                 *
+ *=================================================================================================*
+
+ */
+
 public class ImageDetailsFragment extends Fragment {
     private ImageView imageHolder;
     private TextView imageTitle;
@@ -58,6 +78,7 @@ public class ImageDetailsFragment extends Fragment {
         heartButton.setImageResource(exists?
                 R.drawable.ic_favourite :
                 R.drawable.heart_insta);
+//        Handles the download
         download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -68,11 +89,15 @@ public class ImageDetailsFragment extends Fragment {
         heartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //check if the image exists in the database
                 boolean exists = dbHelper.checkPhotoExistenceById(getArguments().getString("imageId"));
                 if(exists){
+//                    if it's already in the database -> the user want's to unlike it -> delete from the database
                     dbHelper.deleteIfExistsById(getArguments().getString("imageId"));
+//                    changing the favourite icon back to normal (unliked)
                     heartButton.setImageResource(R.drawable.heart_insta);
                 }else{
+//                    if not then we do the inverse
                     dbHelper.insertImageInDB(new ImageModel(getArguments().getString("imageId"),getArguments().getString("imageTitle"), getArguments().getString("imageUrl")));
                     heartButton.setImageResource(R.drawable.ic_favourite);
                 }
@@ -80,19 +105,5 @@ public class ImageDetailsFragment extends Fragment {
         });
 
         return view;
-    }
-
-    public Bitmap downloadImage(String urlAddress){
-        Bitmap bitmap = null;
-        try {
-            URL url = new URL(urlAddress);
-            InputStream inputStream = url.openStream();
-            bitmap = BitmapFactory.decodeStream(inputStream);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return bitmap;
-
-
     }
 }

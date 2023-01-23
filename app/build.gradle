@@ -1,3 +1,25 @@
+/*-------------------------------------------------------------------------------\
+| Project name : SEFKIM                                                          |
++--------------------------------------------------------------------------------+
+| Repository:                                                                    |
+| 2023 (C)                                                                       |
++--------------------------------------------------------------------------------+
+| This module was programmed by ZKIM Youssef                                     |
++--------------------------------------------------------------------------------|
+| Version 1.0                                                                    |
++--------------------------------------------------------------------------------+
+| CODE DESCRIPTION                                                               |
+| ________________                                                               |
+|                                                                                |
++--------------------------------------------------------------------------------+
+| NOTES                                                                          |
+| _____                                                                          |
+| This Gradle configuration contains at the moment of writing this comment       |
+| the latest implementations. I recommend that you check regulary for new        |
+| updates (it may need to update app code)                                       |
+\-------------------------------------------------------------------------------*/
+
+
 plugins {
     id 'com.android.application'
 }
@@ -34,19 +56,11 @@ android {
     lintOptions {
         warning 'Deprecation'
     }
-
-
 }
-
-
 dependencies {
-
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-//    implementation 'androidx.navigation:navigation-fragment:2.5.3'
-//    implementation 'androidx.navigation:navigation-ui:2.5.3'
-//    implementation 'info.androidhive:fontawesome:0.0.5'
     implementation 'androidx.navigation:navigation-fragment:2.3.1'
     implementation 'androidx.navigation:navigation-ui:2.3.1'
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
@@ -60,5 +74,4 @@ dependencies {
     implementation 'com.sdsmdg.harjot:longshadows:1.0.1'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'de.hdodenhof:circleimageview:3.0.1'
-
 }

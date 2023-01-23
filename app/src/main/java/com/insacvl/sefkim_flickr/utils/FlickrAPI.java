@@ -1,5 +1,7 @@
 package com.insacvl.sefkim_flickr.utils;
-
+/**
+* @Author : ZKIM Youssef
+*/
 import android.content.Context;
 import android.os.AsyncTask;
 import android.view.View;
@@ -20,16 +22,53 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FlickrImages extends AsyncTask<String, Void, JSONArray> {
+/*
+ *=================================================================================================*
+ *                                  Developed by : ZKIM Youssef                                    *
+ *=================================================================================================*
+ *=================================================================================================*
+ *                                                                                                 *
+ *                                           FlickrAPI                                             *
+ *                                                                                                 *
+ *=================================================================================================*
+ * Class Description                                                                               *
+ * ----------------                                                                                *
+ * FlickrAPI extends the AsyncTask class. The class is used to fetch images from the Flickr API.   *
+ * The class has several constant variables such as the API_KEY, ENDPOINT, SEARCH_METHOD and       *
+ * RECENT_METHOD which are used to construct the URLs for the API calls.                           *
+ *
+ * The fetchImagesFromAPI() method takes in a searchMethod and a query. It constructs a URL using  *
+ * the ENDPOINT, searchMethod, API_KEY and the query.                                              *
+ * It then opens a connection to the URL, sends a GET request and connects. It reads the input     *
+ * stream and converts it to a JSONObject. It returns then the JSONObject.                         *
+ *
+ * The onPostExecute() method takes in a JSONArray as a parameter. It converts the JSONArray to a  *
+ * list of ImageModel objects. It then sets the listView's adapter to the ImageListAdapter class   *
+ * and sets the visibility of the listView to visible.                                             *
+ *
+ * The convertJSONArrayToList() method takes in a JSONArray as a parameter. It creates a list of   *
+ * ImageModel objects and loops through the JSONArray, creating an ImageModel object for each      *
+ * JSONObject in the array. It then adds the ImageModel to the list. It returns the list of        *
+ * ImageModel objects.                                                                             *
+ *                                                                                                 *
+ *=================================================================================================*
+
+ */
+
+public class FlickrAPI extends AsyncTask<String, Void, JSONArray> {
+    // My FLICKR API key
     private static final String API_KEY = "3b7065148e6472b239e13f9ecde2b260";
+    // FLICKR service BaseUrl
     private static final String ENDPOINT = "https://www.flickr.com/services/rest/";
+    // Url of search method
     private static final String SEARCH_METHOD = "?method=flickr.photos.search&api_key=";
+    // Url of getting recently uploaded images method
     private static final String RECENT_METHOD = "?method=flickr.photos.getRecent&api_key=";
 
     private ListView listView;
     private Context context;
 
-    public FlickrImages(ListView listView, Context context) {
+    public FlickrAPI(ListView listView, Context context) {
         this.listView = listView;
         this.context = context;
     }

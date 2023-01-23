@@ -1,8 +1,26 @@
 package com.insacvl.sefkim_flickr.model;
-
+/**
+* @Author : ZKIM Youssef
+*/
 import org.json.JSONException;
 import org.json.JSONObject;
+/*
+ *=================================================================================================*
+ *                                  Developed by : ZKIM Youssef                                    *
+ *=================================================================================================*
+ *=================================================================================================*
+ *                                                                                                 *
+ *                                           ImageModel                                            *
+ *                                                                                                 *
+ *=================================================================================================*
+ * Class Description                                                                               *
+ * ----------------                                                                                *
+ * Model for the Image received from the API, with different constructors for use cases when i need*
+ * only certain fields                                                                             *
+ *                                                                                                 *
+ *=================================================================================================*
 
+ */
 public class ImageModel {
     private String dbId;
     private String imageId;

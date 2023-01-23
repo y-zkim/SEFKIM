@@ -1,5 +1,7 @@
 package com.insacvl.sefkim_flickr.view;
-
+/**
+* @Author : ZKIM Youssef
+*/
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +21,34 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+/*
+ *=================================================================================================*
+ *                                  Developed by : ZKIM Youssef                                    *
+ *=================================================================================================*
+ *=================================================================================================*
+ *                                                                                                 *
+ *                                        FavoritesAdapter                                         *
+ *                                                                                                 *
+ *=================================================================================================*
+ * Class Description                                                                               *
+ * ----------------                                                                                *
+ * The FavouritesAdapter is called to handle the FavouritesFragment display, it creates the View   *
+ * holders and bind the data and display it on Favourites Fragment                                 *
+ *                                                                                                 *
+ * The class also defines a nested static class called "FavoritesViewHolder" which extends the     *
+ * RecyclerView.ViewHolder class. This class is used to hold and display the information for a     *
+ * single favorited photo.
+ *
+ * The adapter handles also the click on the like button -> if it's already in the favourites, the *
+ * adapter handle the click as a delete from the database and removal from the favourites screen.  *
+ * When clicking the image the handler navigate to the ImageDetailsFragment which is the fragment  *
+ * that contains the details of this photo.                                                        *
+ *                                                                                                 *
+ *=================================================================================================*
+
+ */
+
+
 public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.FavoritesViewHolder> {
     private List<ImageModel> favoritedPhotos;
 
@@ -30,9 +60,7 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.Favo
     @NonNull
     @Override
     public FavoritesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        System.out.println("----------------> On create View");
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.image_item, parent, false);
-        System.out.println("----------------> On create View inflater");
         return new FavoritesViewHolder(view, favoritedPhotos, this);
     }
 
@@ -53,6 +81,7 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.Favo
         private List<ImageModel> favoritedPhotos;
         private FavoritesAdapter adapter;
 
+        // Creates the favourites holder
         public FavoritesViewHolder(@NonNull View itemView,List<ImageModel> favouritePhotos, FavoritesAdapter adapter) {
             super(itemView);
             System.out.println("----------------> in Favourites View Holder");
@@ -66,8 +95,10 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.Favo
             System.out.println("Im in the bind method");
             DatabaseHelper dbHelper = new DatabaseHelper(heartButton.getContext());
             boolean doesExist = dbHelper.checkPhotoExistenceById(photo.getImageId());
+            // On creation if the image exists in the database we colorate the favourite button
             heartButton.setImageResource(doesExist? R.drawable.ic_favourite : R.drawable.heart_insta);
             Picasso.get().load(photo.getImageUrl()).into(photoImageView);
+            // if the image is clicked -> navigate to the fragment containing its details
             photoImageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -79,6 +110,7 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.Favo
                     navController.navigate(R.id.action_navigation_category_to_imageDetailsFragment,bundle);
                 }
             });
+            // Listener on the favourites button to remove the concerened image from the fav. screen
             heartButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

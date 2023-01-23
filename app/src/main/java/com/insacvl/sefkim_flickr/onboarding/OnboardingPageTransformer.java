@@ -1,16 +1,27 @@
 package com.insacvl.sefkim_flickr.onboarding;
-
+/**
+* @Author : ZKIM Youssef
+*/
 import android.view.View;
 
 import androidx.viewpager.widget.ViewPager;
 
 import com.insacvl.sefkim_flickr.R;
 
-/**
- * Smart Home
- * https://github.com/quintuslabs/SmartHome
- * Created on 27-OCT-2019.
- * Created by : Santosh Kumar Dash:- http://santoshdash.epizy.com
+/*
+ *=================================================================================================*
+ *                                  Developed by : ZKIM Youssef                                    *
+ *=================================================================================================*
+ *=================================================================================================*
+ *                                                                                                 *
+ *                                   OnBoardingPageTransformer                                     *
+ *                                                                                                 *
+ *=================================================================================================*
+ * Class Description                                                                               *
+ * ----------------                                                                                *
+ * Add class desc                                                                                  *
+ *=================================================================================================*
+
  */
 
 public class OnboardingPageTransformer implements ViewPager.PageTransformer {

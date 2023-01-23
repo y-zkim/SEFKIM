@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--SEFKIM
+   https://github.com/y-zkim/SEFKIM/
+   Created on 12-JAN-2023.
+   Created by : ZKIM Youssef:- https://github.com/y-zkim/
+-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -18,7 +23,6 @@
                         android:queryHint="Search"
                         app:searchIcon="@drawable/ic_search"
                         android:layout_gravity="right" />
-
                     <ListView
                         android:id="@+id/listview"
                         android:layout_width="match_parent"

@@ -1,5 +1,7 @@
 package com.insacvl.sefkim_flickr.view;
-
+/**
+* @Author : ZKIM Youssef
+*/
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -19,7 +21,24 @@ import androidx.core.content.ContextCompat;
 import com.insacvl.sefkim_flickr.R;
 import com.insacvl.sefkim_flickr.onboarding.OnboardingActivity;
 
+/*
+ *=================================================================================================*
+ *                                  Developed by : ZKIM Youssef                                    *
+ *=================================================================================================*
+ *=================================================================================================*
+ *                                                                                                 *
+ *                                      SplashScreenActivity                                       *
+ *                                                                                                 *
+ *=================================================================================================*
+ * Class Description                                                                               *
+ * ----------------                                                                                *
+ * Splash screen is very first screen that appears after clicking on the app's icon, this class    *
+ * calls the splash layout with its animations and then navigate to the next screen.               *
+ * In my case it's the boarding screens that comes next.                                           *
+ *                                                                                                 *
+ *=================================================================================================*
 
+ */
 
 @SuppressLint("CustomSplashScreen")
 public class SplashScreenActivity extends AppCompatActivity {

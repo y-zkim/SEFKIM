@@ -1,5 +1,7 @@
 package com.insacvl.sefkim_flickr.view;
-
+/**
+* @Author : ZKIM Youssef
+*/
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +19,22 @@ import com.insacvl.sefkim_flickr.model.ImageModel;
 
 import java.util.zip.Inflater;
 
+/*
+ *=================================================================================================*
+ *                                  Developed by : ZKIM Youssef                                    *
+ *=================================================================================================*
+ *=================================================================================================*
+ *                                                                                                 *
+ *                                      image_item_Fragment                                        *
+ *                                                                                                 *
+ *=================================================================================================*
+ * Class Description                                                                               *
+ * ----------------                                                                                *
+ * This class is called to inflate the image item fragment witch is the card containing the image  *
+ *                                                                                                 *
+ *=================================================================================================*
+
+ */
 public class image_item_Fragment extends Fragment {
     View image_item;
 
@@ -34,7 +52,6 @@ public class image_item_Fragment extends Fragment {
 ////                Navigation.findNavController(view).navigate(R.id.confirmationAction, bundle);
 //                NavController navController = Navigation.findNavController(view);
 //                navController.navigate(R.id.action_navigation_category_to_imageDetailsFragment,bundle);
-
             }
         });
         return view;

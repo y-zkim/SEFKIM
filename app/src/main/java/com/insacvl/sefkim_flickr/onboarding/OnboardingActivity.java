@@ -1,5 +1,7 @@
 package com.insacvl.sefkim_flickr.onboarding;
-
+/**
+* @Author : ZKIM Youssef
+*/
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -15,13 +17,23 @@ import androidx.viewpager.widget.ViewPager;
 import com.insacvl.sefkim_flickr.MainActivity;
 import com.insacvl.sefkim_flickr.R;
 
-/**
- * Smart Home
- * https://github.com/quintuslabs/SmartHome
- * Created on 27-OCT-2019.
- * Created by : Santosh Kumar Dash:- http://santoshdash.epizy.com
- */
 
+/*
+ *=================================================================================================*
+ *                                  Developed by : ZKIM Youssef                                    *
+ *=================================================================================================*
+ *=================================================================================================*
+ *                                                                                                 *
+ *                                   OnBoardingActivity                                            *
+ *                                                                                                 *
+ *=================================================================================================*
+ * Class Description                                                                               *
+ * ----------------                                                                                *
+ * The screen that appears after the splash screen are managed by this class.                      *
+ *                                                                                                 *
+ *=================================================================================================*
+
+ */
 public class OnboardingActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
@@ -48,12 +60,14 @@ public class OnboardingActivity extends AppCompatActivity {
     // Listener for next button press
     public void nextPage(View view) {
         if (view.getId() == R.id.button2) {
+            // Check if there is a next page
             if (viewPager.getCurrentItem() < onboardingAdapter.getCount() - 1) {
                 viewPager.setCurrentItem(viewPager.getCurrentItem() + 1, true);
             }
         }
     }
 
+    // Method to make the status bar transparent
     private void makeStatusbarTransparent() {
 
         if (Build.VERSION.SDK_INT >= 21) {
@@ -66,8 +80,9 @@ public class OnboardingActivity extends AppCompatActivity {
             window.setStatusBarColor(Color.TRANSPARENT);
         }
     }
-
+    // Listener for finish button press
     public void finishPage(View view) {
+        // Start the MainActivity and finish the OnboardingActivity
         startActivity(new Intent(getApplicationContext(), MainActivity.class));
         finish();
     }

@@ -90,7 +90,7 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.insacvl.sefkim_flickr.view.RoomDetailsActivity"
+        android:name="com.insacvl.sefkim_flickr.view.SettingsActivity"
         android:label="settings"
         tools:layout="@layout/settings" >
         <action

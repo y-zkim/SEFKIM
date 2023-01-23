@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--SEFKIM
+   https://github.com/y-zkim/SEFKIM/
+   Created on 12-JAN-2023.
+   Created by : ZKIM Youssef:- https://github.com/y-zkim/
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,71 +11,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".PostActivity">
-    <!--    <com.google.android.material.appbar.AppBarLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:background="?android:attr/windowBackground">-->
 
-    <!--        <androidx.appcompat.widget.Toolbar-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:background="@color/white"-->
-    <!--            android:id="@+id/toolbar">-->
-
-    <!--            <RelativeLayout-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="wrap_content">-->
-
-    <!--                &lt;!&ndash;                <ImageView&ndash;&gt;-->
-    <!--                &lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
-    <!--                &lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
-    <!--                &lt;!&ndash;                    android:layout_alignParentStart="true"&ndash;&gt;-->
-    <!--                &lt;!&ndash;                    android:src="@drawable/home"&ndash;&gt;-->
-    <!--                &lt;!&ndash;                    android:id="@+id/close"/>&ndash;&gt;-->
-
-    <!--                <TextView-->
-    <!--                    android:id="@+id/post"-->
-    <!--                    android:layout_width="86dp"-->
-    <!--                    android:layout_height="25dp"-->
-    <!--                    android:layout_alignParentStart="true"-->
-    <!--                    android:layout_alignParentEnd="true"-->
-    <!--                    android:layout_marginStart="100dp"-->
-    <!--                    android:layout_marginTop="0dp"-->
-    <!--                    android:layout_marginEnd="100dp"-->
-    <!--                    android:text="SEFKIM"-->
-    <!--                    android:fontFamily="@font/raleway_light"-->
-    <!--                    android:textAlignment="center"-->
-    <!--                    android:textColor="@color/color_gray"-->
-    <!--                    android:textSize="20sp" />-->
-
-    <!--            </RelativeLayout>-->
-
-    <!--        </androidx.appcompat.widget.Toolbar>-->
-
-    <!--    </com.google.android.material.appbar.AppBarLayout>-->
-<!--    <LinearLayout-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content">-->
-<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;            android:text="Hello">&ndash;&gt;-->
-
-<!--&lt;!&ndash;        </TextView>&ndash;&gt;-->
-<!--        <androidx.appcompat.widget.ActionMenuView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content">-->
-
-<!--        </androidx.appcompat.widget.ActionMenuView>-->
-<!--    </LinearLayout>-->
-<!--    <androidx.cardview.widget.CardView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:cardElevation="0dp"-->
-<!--        android:layout_margin="20dp"-->
-<!--        android:padding="8dp"-->
-<!--        android:orientation="vertical"-->
-<!--        app:cardCornerRadius="20dp"></androidx.cardview.widget.CardView>-->
 
     <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
