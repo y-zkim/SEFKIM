@@ -5,6 +5,7 @@ package com.insacvl.sefkim_flickr.view;
 */
 
 import android.annotation.SuppressLint;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -57,7 +58,16 @@ public class HomeFragment extends Fragment {
         homeView = inflater.inflate(R.layout.fragment_home,container,false);
         recyclerView = homeView.findViewById(R.id.recycler_view);
         mAdapter = new CardAdapter(cardList, getActivity().getApplicationContext());
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity().getApplicationContext(), 1);
+        RecyclerView.LayoutManager mLayoutManager;
+//        handle orientation of the screen
+        int orientation = getActivity().getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            // code for portrait mode
+            mLayoutManager = new GridLayoutManager(getActivity().getApplicationContext(), 1);
+        } else {
+            // code for landscape mode
+            mLayoutManager = new GridLayoutManager(getActivity().getApplicationContext(), 3);
+        }
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
