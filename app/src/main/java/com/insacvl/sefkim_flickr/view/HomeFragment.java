@@ -61,7 +61,8 @@ public class HomeFragment extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
-
+        // to avoid duplicating cards when back Button is performed
+        if(cardList.size()>0) return homeView;
         prepareRoomData();
         return homeView;
     }
