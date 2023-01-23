@@ -28,8 +28,8 @@ import java.util.Objects;
  *=================================================================================================*
  * Class Description                                                                               *
  * ----------------                                                                                *
- * The details have the image, it's description, as well as the like button and the download.      *
- * Those features are handled by this class by calling the necessary adapter and putting listeners.*
+ * This class represents the SearchFragment, which is responsible for displaying the search        *
+ * functionality and the results of the search in the app                                          *
  *                                                                                                 *
  *=================================================================================================*
 
@@ -42,16 +42,18 @@ public class SearchFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.search_fragment, container, false);
+        // Get a reference to the SearchView and ImageView
         searchView = view.findViewById(R.id.search_view);
         image= searchView.findViewById(R.id.imageView);
-
+        // Set the listener for when the search query is submitted
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            // Perform the search when the user submits the query
             @Override
             public boolean onQueryTextSubmit(String query) {
                 performSearch(query);
                 return true;
             }
-
+            // Perform the search as the user types
             @Override
             public boolean onQueryTextChange(String query) {
                 if(query.equals("")) onQueryTextSubmit("");
