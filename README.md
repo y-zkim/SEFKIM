@@ -17,8 +17,18 @@ SEFKIM also offers you the ability to customize the appearance of the applicatio
 In summary, SEFKIM is an easy-to-use Android application that offers great flexibility and advanced features to allow you to discover and use amazing images from Flickr. It is ideal for photographers, artists, bloggers, and anyone looking to use high-quality images for their creative projects.
 
 # Screenshots
-
+## Main images
 ![Alt text](/Screenshots/emulator.png?raw=true "Emulator")
-![Alt text](/Screenshots/home_short_light.jpg?raw=true "Home short ligh")![Alt text](/Screenshots/home_short_dark.jpg?raw=true "home_short_dark")
-![Alt text](/Screenshots/search_light.jpg?raw=true "search_light")![Alt text](/Screenshots/search_dark.jpg?raw=true "search_dark")
-![Alt text](/Screenshots/fav_light.jpg?raw=true "fav_light")![Alt text](/Screenshots/fav_dark.jpg?raw=true "fav_dark")
+## Home screen
+| Light mode | Dark mode |
+| --- | --- |
+| ![Alt text](/Screenshots/home_short_light.jpg?raw=true "Home short ligh") | ![Alt text](/Screenshots/home_short_dark.jpg?raw=true "home_short_dark") |
+## Search screen
+| Light mode | Dark mode |
+| --- | --- |
+| ![Alt text](/Screenshots/search_light.jpg?raw=true "search_light") | ![Alt text](/Screenshots/search_dark.jpg?raw=true "search_dark") |
+me_short_dark") |
+## Favourites screen
+| Light mode | Dark mode |
+| --- | --- |
+| ![Alt text](/Screenshots/fav_light.jpg?raw=true "fav_light") | ![Alt text](/Screenshots/fav_dark.jpg?raw=true "fav_dark") |
