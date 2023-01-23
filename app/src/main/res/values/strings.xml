@@ -17,7 +17,10 @@
     <string name="title_category">Favourites</string>
     <string name="download_text">Download</string>
     <string name="title_search">Search</string>
-    <string name="demo_title">Demo title</string>
+    <string name="onboarding_title1">SEFKIM</string>
+    <string name="onboarding_title2">SEFKIM</string>
+    <string name="onboarding_title3">SEFKIM</string>
+    <string name="onboarding_title4">SEFKIM</string>
 
     <string name="ob_header1">SIMPLE ABROAD CALLS</string>
     <string name="ob_header2">FREE WONEP TO WONEP</string>
@@ -29,6 +32,10 @@
     <string name="ob_desc2">If the person you’re calling also has Wonep the call will be entirely free</string>
     <string name="ob_desc3">We have a very small charge for non-Wonep calls to mobiles or landlines</string>
 
-    <string name="demo_content">Lorem ipsum dolor sit amet, consectetur\n adipiscing elit. Vivamus sodales faucibus\n dapibus. Etiam mattis leo quis laoreet dictum.</string>
-    <string name="finish">Finish</string>
+    <string name="onboarding_content_1">SEFKIM is a project that was made\nin the scope of an android class\ni had at INSA CVL.</string>
+    <string name="onboarding_content_2">In this application you will interactwith images offered by : \n\nFLICKR API</string>
+    <string name="onboarding_content_3">I used different methods offered by the API such as "search" and "getRecent"to give the user the freedome and the ability to enjoy both FLICKR images and the beauty of this app.</string>
+    <string name="onboarding_content_4">You can explore trends, categories or even search your favourite topics.\nDownloading your favorites or liking them to return to them back later is also an option.</string>
+
+    <string name="finish">Let\'s go!</string>
 </resources>

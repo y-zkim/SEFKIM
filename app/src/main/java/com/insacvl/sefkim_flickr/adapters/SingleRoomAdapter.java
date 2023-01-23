@@ -6,7 +6,10 @@ import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatDelegate;
@@ -26,7 +29,7 @@ public class SingleRoomAdapter extends RecyclerView.Adapter<SingleRoomAdapter.My
     Context context;
     private View itemView;
     private List<Room> roomList;
-    SwitchButton darkModeSwitch;
+    Switch darkModeSwitch;
     private SharedPreferences sharedPreferences;
 
     public SingleRoomAdapter(List<Room> roomList, Context context,SharedPreferences sp) {
@@ -40,8 +43,8 @@ public class SingleRoomAdapter extends RecyclerView.Adapter<SingleRoomAdapter.My
         itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.single_room_row, parent, false);
         darkModeSwitch = itemView.findViewById(R.id.theme_switch_);
+        System.out.println("==============================================================================> shared Prefs  = " + sharedPreferences.getBoolean("darkMode",false));
         darkModeSwitch.setChecked(sharedPreferences.getBoolean("darkMode",true));
-
         return new MyViewHolder(itemView);
     }
 
@@ -53,31 +56,24 @@ public class SingleRoomAdapter extends RecyclerView.Adapter<SingleRoomAdapter.My
 
         if(room.getName().equals("Night mode")){
             itemView.findViewById(R.id.setting_item_drawable).setBackground(ContextCompat.getDrawable(context,R.drawable.ic_night_mode_1));TextView tv = (TextView)itemView.findViewById(R.id.title);tv.setText(room.getName().toString());
-            darkModeSwitch.setOnClickListener(new View.OnClickListener() {
+            darkModeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
-                public void onClick(View view) {
-                        darkModeSwitch=view.findViewById(R.id.theme_switch);
-                        darkModeSwitch.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-
-                                if(darkModeSwitch.isChecked()){
-                                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                                    SharedPreferences.Editor editor=sharedPreferences.edit();
-                                    editor.putBoolean("darkMode",true);
-                                    editor.apply();
-                                    darkModeSwitch.setChecked(true);
-                                }else{
-                                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                                    SharedPreferences.Editor editor=sharedPreferences.edit();
-                                    editor.putBoolean("darkMode",false);
-                                    editor.apply();
-                                    darkModeSwitch.setChecked(false);
-                                }
-
-                            }
-                        });
-
+                public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
+                    if(checked){
+                        System.err.println("====================================================================> Attempting to modifing the theme to dark Mode");
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                        SharedPreferences.Editor editor=sharedPreferences.edit();
+                        editor.putBoolean("darkMode",true);
+                        editor.apply();
+                        darkModeSwitch.setChecked(true);
+                    }else{
+                        System.err.println("====================================================================> Attempting to modifing the theme to light Mode");
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                        SharedPreferences.Editor editor=sharedPreferences.edit();
+                        editor.putBoolean("darkMode",false);
+                        editor.apply();
+                        darkModeSwitch.setChecked(false);
+                    }
                 }
             });
         }

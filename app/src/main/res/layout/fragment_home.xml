@@ -96,12 +96,12 @@
             </ScrollView>
         </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <Switch
-        android:id="@+id/theme_switch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enable dark mode"
-        tools:layout_editor_absoluteX="178dp"
-        tools:layout_editor_absoluteY="138dp"
-        tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+<!--    <Switch-->
+<!--        android:id="@+id/theme_switch"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Enable dark mode"-->
+<!--        tools:layout_editor_absoluteX="178dp"-->
+<!--        tools:layout_editor_absoluteY="138dp"-->
+<!--        tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>

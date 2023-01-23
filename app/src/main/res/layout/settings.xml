@@ -32,10 +32,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <ImageView
+                        <ImageButton
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:onClick="onBackClicked"
+                            android:id="@+id/backButton"
                             android:background="@drawable/ic_chevron_left_black_24dp" />
                     </RelativeLayout>
 
@@ -126,13 +126,12 @@
                                     android:text="App owner"
                                     android:fontFamily="@font/raleway_light"
                                     android:textColor="@color/white"
-                                    android:textSize="25dp"
+                                    android:textSize="20dp"
                                     android:textStyle="bold" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="-15dp"
                                     android:fontFamily="@font/raleway_light"
                                     android:text="ZKIM Youssef"
                                     android:textColor="@color/white"
@@ -172,9 +171,9 @@
                                     android:layout_height="wrap_content"
                                     android:text="Github"
                                     android:fontFamily="@font/raleway_light"
-                                    android:layout_marginLeft="-16dp"
+                                    android:layout_marginLeft="-23dp"
                                     android:textColor="@color/white"
-                                    android:textSize="25dp"
+                                    android:textSize="20dp"
                                     android:textStyle="bold" />
 
                                 <TextView

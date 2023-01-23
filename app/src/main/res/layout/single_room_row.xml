@@ -42,7 +42,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="Bed Room"
-                    android:textColor="@color/textColor"
                     android:textSize="20dp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -53,7 +52,7 @@
                 android:layout_weight="8"
                 android:gravity="center">
 
-                <com.insacvl.sefkim_flickr.utils.SwitchButton
+                <Switch
                     android:id="@+id/theme_switch_"
                     android:layout_width="65dp"
                     android:layout_height="30dp"

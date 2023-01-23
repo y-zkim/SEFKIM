@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -39,6 +40,7 @@ public class RoomDetailsActivity extends Fragment {
     private RecyclerView recyclerView;
     private SingleRoomAdapter mAdapter;
     private View settingsView;
+    private ImageButton backButton;
 
     public static void setWindowFlag(Activity activity, final int bits, boolean on) {
 
@@ -57,12 +59,20 @@ public class RoomDetailsActivity extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         settingsView = inflater.inflate(R.layout.settings,container,false);
         recyclerView = settingsView.findViewById(R.id.recycler_view);
+        backButton = settingsView.findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().onBackPressed();
+            }
+        });
 
         mAdapter = new SingleRoomAdapter(roomList, getContext(),getActivity().getPreferences(Context.MODE_PRIVATE));
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
+
         prepareRoomData();
         return settingsView;
     }
@@ -95,14 +105,15 @@ public class RoomDetailsActivity extends Fragment {
     private void prepareRoomData() {
         Room room = new Room("1", "Night mode");
         roomList.add(room);
-        room = new Room("2", "Fan");
-        roomList.add(room);
+//        room = new Room("2", "Fan");
+//        roomList.add(room);
 
         mAdapter.notifyDataSetChanged();
     }
 
 //    public void onBackClicked(View view) {
-//        startActivity(new Intent(getApplicationContext(), MainActivity.class));
-//        finish();
+//
+//
+////        startActivity(new Intent(getContext(), MainActivity.class));
 //    }
 }

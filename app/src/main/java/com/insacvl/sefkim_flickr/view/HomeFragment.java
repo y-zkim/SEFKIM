@@ -43,6 +43,7 @@ public class HomeFragment extends Fragment {
     private RoomAdapter mAdapter;
     private ImageButton settings;
     private ConstraintLayout constraintLayout;
+    private ImageButton backButton;
 
 
     @SuppressLint("UseCompatLoadingForDrawables")
@@ -52,10 +53,10 @@ public class HomeFragment extends Fragment {
         homeView = inflater.inflate(R.layout.fragment_home,container,false);
         constraintLayout=homeView.findViewById(R.id.homeBg);
         // Save switch state in shared preferences
-        theme_switcher=homeView.findViewById(R.id.theme_switch);
+//        theme_switcher=homeView.findViewById(R.id.theme_switch);
         sharedPreferences=getActivity().getPreferences(Context.MODE_PRIVATE);
 //        System.err.println("actual state of the switch ========> " + sharedPreferences.getBoolean("save"));
-        theme_switcher.setChecked(sharedPreferences.getBoolean("darkMode",true));
+//        theme_switcher.setChecked(sharedPreferences.getBoolean("darkMode",true));
 //        if(sharedPreferences.getBoolean("darkMode",true)) {
 //            constraintLayout.setBackground(getResources().getDrawable(R.drawable.photography_bg));
 //        }else{
@@ -75,29 +76,29 @@ public class HomeFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        theme_switcher=homeView.findViewById(R.id.theme_switch);
-        theme_switcher.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if(theme_switcher.isChecked()){
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-//                    constraintLayout.setBackground(getResources().getDrawable(R.drawable.background_night));
-                    SharedPreferences.Editor editor=sharedPreferences.edit();
-                    editor.putBoolean("darkMode",true);
-                    editor.apply();
-                    theme_switcher.setChecked(true);
-                }else{
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-//                    constraintLayout.setBackground(getResources().getDrawable(R.drawable.background));
-                    SharedPreferences.Editor editor=sharedPreferences.edit();
-                    editor.putBoolean("darkMode",false);
-                    editor.apply();
-                    theme_switcher.setChecked(false);
-                }
-
-            }
-        });
+//        theme_switcher=homeView.findViewById(R.id.theme_switch);
+//        theme_switcher.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                if(theme_switcher.isChecked()){
+//                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+////                    constraintLayout.setBackground(getResources().getDrawable(R.drawable.background_night));
+//                    SharedPreferences.Editor editor=sharedPreferences.edit();
+//                    editor.putBoolean("darkMode",true);
+//                    editor.apply();
+//                    theme_switcher.setChecked(true);
+//                }else{
+//                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+////                    constraintLayout.setBackground(getResources().getDrawable(R.drawable.background));
+//                    SharedPreferences.Editor editor=sharedPreferences.edit();
+//                    editor.putBoolean("darkMode",false);
+//                    editor.apply();
+//                    theme_switcher.setChecked(false);
+//                }
+//
+//            }
+//        });
     }
     private void prepareRoomData() {
         Room room = new Room("1", "FASHION");
