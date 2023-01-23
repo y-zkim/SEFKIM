@@ -115,6 +115,7 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.Favo
                 @Override
                 public void onClick(View view) {
                     int position = getAdapterPosition();
+                    new FavouritesHandler((ImageButton) view,view.getContext()).handleFavouriteButtonClick(favoritedPhotos.get(position));
                     favoritedPhotos.remove(position);
                     adapter.notifyItemRemoved(position);
                     adapter.notifyItemRangeChanged(position, favoritedPhotos.size());
