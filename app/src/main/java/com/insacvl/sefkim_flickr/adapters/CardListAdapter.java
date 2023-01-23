@@ -18,10 +18,9 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import com.insacvl.sefkim_flickr.R;
-import com.insacvl.sefkim_flickr.db.DatabaseHelper;
-import com.insacvl.sefkim_flickr.db.FavouriteContract;
+import com.insacvl.sefkim_flickr.database.DatabaseHelper;
+import com.insacvl.sefkim_flickr.database.FavouriteContract;
 import com.insacvl.sefkim_flickr.model.ImageModel;
-import com.insacvl.sefkim_flickr.view.FavouritesHandler;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -31,13 +30,13 @@ import java.util.List;
  *                                  Developed by : ZKIM Youssef                                    *
  *=================================================================================================*
  *=================================================================================================*
- *
- *                                     ImageListAdapter                                            *
- *
+ *                                                                                                 *
+ *                                     CardListAdapter                                             *
+ *                                                                                                 *
  *=================================================================================================*
  * Class Description                                                                               *
  * ----------------                                                                                *
- * ImageListAdapter is an adapter class that is used to display a list of images in a ListView .   *
+ * CardListAdapter is an adapter class that is used to display a list of images in a ListView .    *
  * The class takes in a context and a list of ImageModel objects as parameters in its constructor. *
  * The class extends the BaseAdapter class and overrides its methods to handle the list of images. *
  * The getView() method is used to create the view for each image in the list, it loads the image  *
@@ -52,7 +51,7 @@ import java.util.List;
 
  */
 
-public class ImageListAdapter extends BaseAdapter {
+public class CardListAdapter extends BaseAdapter {
     private List<ImageModel> images;
     private LayoutInflater inflater;
     private Context context;
@@ -61,7 +60,7 @@ public class ImageListAdapter extends BaseAdapter {
     private ImageView cardImage;
 
     // constructor that takes in context and list of images
-    public ImageListAdapter(Context context, List<ImageModel> images) {
+    public CardListAdapter(Context context, List<ImageModel> images) {
         this.context = context;
         this.images = images;
         inflater = LayoutInflater.from(context);

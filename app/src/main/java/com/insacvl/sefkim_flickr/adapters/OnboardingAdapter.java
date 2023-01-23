@@ -1,4 +1,4 @@
-package com.insacvl.sefkim_flickr.onboarding;
+package com.insacvl.sefkim_flickr.adapters;
 /**
 * @Author : ZKIM Youssef
 */
@@ -59,7 +59,7 @@ public class OnboardingAdapter extends PagerAdapter {
             R.layout.onboarding_4
     };
 
-    OnboardingAdapter(Context context) {
+    public OnboardingAdapter(Context context) {
         this.context = context;
     }
 

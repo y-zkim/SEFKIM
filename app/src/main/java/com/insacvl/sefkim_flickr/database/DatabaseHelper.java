@@ -1,4 +1,4 @@
-package com.insacvl.sefkim_flickr.db;
+package com.insacvl.sefkim_flickr.database;
 /**
 * @Author : ZKIM Youssef
 */
@@ -23,8 +23,8 @@ import com.insacvl.sefkim_flickr.model.ImageModel;
  *=================================================================================================*
  * Class Description                                                                               *
  * ----------------                                                                                *
- * This code is for a class that interacts with a SQLite database to perform various operations on *
- * a "favorites" table. The class includes the following methods:                                  *
+ * This class interacts with a SQLite database to perform various operations on favorites table.   *
+ * The class includes the following methods:                                                       *
  *                                                                                                 *
  * - fetchData(): This method takes in a whereSelection string and an array of whereSelectionArgs, *
  * and performs a query on the "favorites" table to fetch data based on the provided selection     *

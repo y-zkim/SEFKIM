@@ -1,4 +1,4 @@
-package com.insacvl.sefkim_flickr.view;
+package com.insacvl.sefkim_flickr.adapters;
 /**
 * @Author : ZKIM Youssef
 */
@@ -15,7 +15,7 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.insacvl.sefkim_flickr.R;
-import com.insacvl.sefkim_flickr.db.DatabaseHelper;
+import com.insacvl.sefkim_flickr.database.DatabaseHelper;
 import com.insacvl.sefkim_flickr.model.ImageModel;
 import com.squareup.picasso.Picasso;
 

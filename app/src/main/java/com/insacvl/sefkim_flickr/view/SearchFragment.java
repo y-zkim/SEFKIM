@@ -12,7 +12,7 @@ import androidx.appcompat.widget.SearchView;
 
 import androidx.fragment.app.Fragment;
 
-import com.insacvl.sefkim_flickr.utils.FlickrAPI;
+import com.insacvl.sefkim_flickr.network.FlickrAPI;
 import com.insacvl.sefkim_flickr.R;
 
 import java.util.Objects;

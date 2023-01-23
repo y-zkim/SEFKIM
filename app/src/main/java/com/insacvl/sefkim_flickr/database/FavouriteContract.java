@@ -1,4 +1,4 @@
-package com.insacvl.sefkim_flickr.db;
+package com.insacvl.sefkim_flickr.database;
 /**
 * @Author : ZKIM Youssef
 */

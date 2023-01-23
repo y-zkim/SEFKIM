@@ -16,6 +16,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.insacvl.sefkim_flickr.MainActivity;
 import com.insacvl.sefkim_flickr.R;
+import com.insacvl.sefkim_flickr.adapters.OnboardingAdapter;
 
 
 /*

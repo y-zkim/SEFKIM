@@ -1,4 +1,4 @@
-package com.insacvl.sefkim_flickr.view;
+package com.insacvl.sefkim_flickr.adapters;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -7,8 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.widget.ImageButton;
 
 import com.insacvl.sefkim_flickr.R;
-import com.insacvl.sefkim_flickr.db.DatabaseHelper;
-import com.insacvl.sefkim_flickr.db.FavouriteContract;
+import com.insacvl.sefkim_flickr.database.DatabaseHelper;
+import com.insacvl.sefkim_flickr.database.FavouriteContract;
 import com.insacvl.sefkim_flickr.model.ImageModel;
 
 /*

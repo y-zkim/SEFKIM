@@ -10,14 +10,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 
 import com.insacvl.sefkim_flickr.R;
-import com.insacvl.sefkim_flickr.adapters.ImageListAdapter;
-import com.insacvl.sefkim_flickr.model.ImageModel;
-
-import java.util.zip.Inflater;
 
 /*
  *=================================================================================================*

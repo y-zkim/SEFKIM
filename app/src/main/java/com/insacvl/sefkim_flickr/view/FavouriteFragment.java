@@ -14,8 +14,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.insacvl.sefkim_flickr.R;
-import com.insacvl.sefkim_flickr.db.DatabaseHelper;
-import com.insacvl.sefkim_flickr.db.FavouriteContract;
+import com.insacvl.sefkim_flickr.adapters.FavoritesAdapter;
+import com.insacvl.sefkim_flickr.database.DatabaseHelper;
+import com.insacvl.sefkim_flickr.database.FavouriteContract;
 import com.insacvl.sefkim_flickr.model.ImageModel;
 
 import org.jetbrains.annotations.NotNull;

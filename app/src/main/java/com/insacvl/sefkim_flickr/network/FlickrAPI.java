@@ -1,4 +1,4 @@
-package com.insacvl.sefkim_flickr.utils;
+package com.insacvl.sefkim_flickr.network;
 /**
 * @Author : ZKIM Youssef
 */
@@ -7,7 +7,7 @@ import android.os.AsyncTask;
 import android.view.View;
 import android.widget.ListView;
 
-import com.insacvl.sefkim_flickr.adapters.ImageListAdapter;
+import com.insacvl.sefkim_flickr.adapters.CardListAdapter;
 import com.insacvl.sefkim_flickr.model.ImageModel;
 
 import org.json.JSONArray;
@@ -43,7 +43,7 @@ import java.util.List;
  * stream and converts it to a JSONObject. It returns then the JSONObject.                         *
  *
  * The onPostExecute() method takes in a JSONArray as a parameter. It converts the JSONArray to a  *
- * list of ImageModel objects. It then sets the listView's adapter to the ImageListAdapter class   *
+ * list of ImageModel objects. It then sets the listView's adapter to the CardListAdapter class   *
  * and sets the visibility of the listView to visible.                                             *
  *
  * The convertJSONArrayToList() method takes in a JSONArray as a parameter. It creates a list of   *
@@ -112,7 +112,7 @@ public class FlickrAPI extends AsyncTask<String, Void, JSONArray> {
             List<ImageModel> images = convertJSONArrayToList(jsonImages);
             if (images != null && images.size()!=0) {
                 System.out.println("result -->" + images.toString());
-                ImageListAdapter adapter = new ImageListAdapter(context, images);
+                CardListAdapter adapter = new CardListAdapter(context, images);
                 listView.setAdapter(adapter);
                 listView.setVisibility(View.VISIBLE);
             }

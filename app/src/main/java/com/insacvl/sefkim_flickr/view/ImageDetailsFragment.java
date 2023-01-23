@@ -2,42 +2,24 @@ package com.insacvl.sefkim_flickr.view;
 /**
 * @Author : ZKIM Youssef
 */
-import static android.os.Environment.getExternalStorageDirectory;
 
-import android.Manifest;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.insacvl.sefkim_flickr.R;
 import com.insacvl.sefkim_flickr.adapters.DownloadImageTask;
-import com.insacvl.sefkim_flickr.db.DatabaseHelper;
+import com.insacvl.sefkim_flickr.database.DatabaseHelper;
 import com.insacvl.sefkim_flickr.model.ImageModel;
 import com.squareup.picasso.Picasso;
-
-import java.io.BufferedInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
 
 /*
  *=================================================================================================*
