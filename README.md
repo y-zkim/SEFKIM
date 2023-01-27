@@ -27,7 +27,6 @@ In summary, SEFKIM is an easy-to-use Android application that offers great flexi
 | Light mode | Dark mode |
 | --- | --- |
 | ![Alt text](/Screenshots/search_light.jpg?raw=true "search_light") | ![Alt text](/Screenshots/search_dark.jpg?raw=true "search_dark") |
-me_short_dark") |
 ## Favourites screen
 | Light mode | Dark mode |
 | --- | --- |
