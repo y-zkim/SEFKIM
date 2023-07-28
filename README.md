@@ -2,7 +2,7 @@
 
 ## What's SEFKIM ?
 
-SEFKIM is a mobile application that I designed as part of the mini project for the Android Development module. The name of the application comes from a combination of my name and surname (YOUSSEF ZKIM).
+SEFKIM is a mobile application that I designed as part of the mini project for the Android Development module.
 
 SEFKIM is an innovative Android application that I designed to allow you to discover and use exceptional images from Flickr. It uses the Flickr API to retrieve images from different categories and offers you a smooth and enjoyable navigation experience.
 
